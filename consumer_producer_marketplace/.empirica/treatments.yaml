@@ -51,3 +51,9 @@ treatments:
         isAuto: 1
         playerCount: 1
         strategy: titfortat
+    - name: Artificial Consumer - TwoPriorRounds
+      factors:
+        isAuto: 1
+        playerCount: 1
+        strategy: twopriorrounds
+   
