@@ -56,4 +56,9 @@ treatments:
         isAuto: 1
         playerCount: 1
         strategy: twopriorrounds
+    - name: Artificial Consumer - LLM
+      factors:
+        isAuto: 1
+        playerCount: 1
+        strategy: llm
    

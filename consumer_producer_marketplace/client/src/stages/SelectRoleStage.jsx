@@ -79,6 +79,54 @@ export function SelectRolesStage() {
                         },
                     ]);
                 }
+                else if (strategy == "twopriorrounds") {
+                    game.set("agents", [
+                        {
+                            id: player.id,
+                            role: "producer",
+                            agent: "human",
+                            score: 0,
+                            scores: [],
+                            productionHistory: []
+                        },
+                        {
+                            id: "Artificial Consumer Agent 1",
+                            strategy: "twopriorrounds",
+                            role: "consumer",
+                            agent: "artificial",
+                            wallet: 24,
+                            score: 0,
+                            scores: [],
+                            cheatedHistory: [],
+                            scoreHistory: [],
+                            purchaseHistory: []
+                        },
+                    ]);
+                }
+                else if (strategy == "llm") {
+                    game.set("agents", [
+                        {
+                            id: player.id,
+                            role: "producer",
+                            agent: "human",
+                            score: 0,
+                            scores: [],
+                            productionHistory: []
+                        },
+                        {
+                            id: "Artificial Consumer Agent 1",
+                            strategy: "llm",
+                            role: "consumer",
+                            agent: "artificial",
+                            wallet: 24,
+                            score: 0,
+                            scores: [],
+                            cheatedHistory: [],
+                            scoreHistory: [],
+                            purchaseHistory: []
+                        },
+                    ]);
+                }
             }
             if (round.get("name") != "Round1") {
                 player.set("capital", player.get("capital") + 12)
