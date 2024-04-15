@@ -1152,11 +1152,11 @@ async function updateProducerScores(game) {
     }
   });
 }
-
+// In line 1159 gpt key has been removed to avoide key being used by scrapers
 const openai = require('openai');
 async function call(x, y) {
   // Initialize the OpenAI API client with your API key
-  const client = new openai.OpenAI(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);
+  //const client = new openai.OpenAI();
   try {
     // Make the API call to generate a completion
     const completion = await client.chat.completions.create({
